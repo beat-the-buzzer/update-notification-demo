@@ -1,2 +1,5 @@
-# update-notification-demo
-更新提醒
+# plugin-web-update-notification
+
+```bash
+pnpm add @plugin-web-update-notification/vite -D
+```
