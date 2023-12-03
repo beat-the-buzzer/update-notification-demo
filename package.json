@@ -62,7 +62,7 @@
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "@iconify/json": "^1.1.422",
-    "@plugin-web-update-notification/vite": "^1.7.0",
+    "@plugin-web-update-notification/vite": "1.6",
     "@purge-icons/generated": "^0.7.0",
     "@types/codemirror": "^5.60.5",
     "@types/crypto-js": "^4.0.2",

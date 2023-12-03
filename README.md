@@ -1,7 +1,7 @@
 # plugin-web-update-notification
 
 ```bash
-pnpm add @plugin-web-update-notification/vite -D
+pnpm add @plugin-web-update-notification/vite@1.6 -D # 注意版本号，与vite对应
 ```
 
 ```js

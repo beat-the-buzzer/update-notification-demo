@@ -8,6 +8,7 @@ import { createProxy } from './build/vite/proxy';
 import { wrapperEnv } from './build/utils';
 import { createVitePlugins } from './build/vite/plugin';
 import { OUTPUT_DIR } from './build/constant';
+import { webUpdateNotice } from '@plugin-web-update-notification/vite'
 
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
@@ -90,7 +91,14 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     },
 
     // The vite plugin used by the project. The quantity is large, so it is separately extracted and managed
-    plugins: createVitePlugins(viteEnv, isBuild),
+    plugins: [...createVitePlugins(viteEnv, isBuild), webUpdateNotice({
+      notificationProps: {
+        title: '更新通知',
+        description: '网站内容有更新，请刷新页面，获取最新内容',
+        buttonText: '刷新',
+        dismissButtonText: '忽略'
+      },
+    })],
 
     optimizeDeps: {
       // @iconify/iconify: The dependency is dynamically and virtually loaded by @purge-icons/generated, so it needs to be specified explicitly
