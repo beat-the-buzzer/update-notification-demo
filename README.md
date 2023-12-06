@@ -29,7 +29,7 @@ export default defineConfig({
 
 3. 右键 `dist/index.html`， 选择 `open with live server`
 
-4. 修改 `web_version_by_plugin`的版本号
+4. 修改 `web_version_by_plugin.json`文件内的版本号
 
 此时就能在页面上看到更新提醒了。
 
